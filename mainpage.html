@@ -6,8 +6,15 @@
       <style>
          p, .infofield {
             font-size:15px;
-            font-color:black;
+            color:black;
             font-family:Arial;
+         }
+         button:hover {
+            background-color: #55FF99; <!-- This stylistic element is a pseudoclass -->
+         }
+         p::selection {
+            color:#000099;
+            background-color:#CCCCFF
          }
       </style>
    </head>
@@ -15,6 +22,8 @@
       <h1>Hello!</h1>
       <p>This is just my first page. We'll see how things go here.
          Until then, feel free to test the features out!</p>
+      <p>Also, if you want to check out some cool HTML, try highlighting
+         any part of this paragraph or the one before it! \1f600</p>
       <form>
          <input type="text" placeholder="username" name="username" class="infofield">
          <input type="password" placeholder="password" name="password" class="infofield">
