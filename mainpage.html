@@ -3,6 +3,7 @@
 
    <head>
       <title>First spades and general testing site!</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <style>
          p, .infofield {
             font-size:15px;
@@ -16,10 +17,25 @@
             color:#000099;
             background-color:#CCCCFF
          }
+         @media print {
+            .noprint {
+               display:none;
+            }
+         }
+         @media (max-width: 900px) {
+            body {
+               background-color: #AACCFF
+            }
+         }
+         @media (min-width: 700px) {
+            .changingheader::after {
+               content: " Welcome to my first page!"
+            }
+         }
       </style>
    </head>
    <body>
-      <h1>Hello!</h1>
+      <h1 class="changingheader">Hello!</h1>
       <p>This is just my first page. We'll see how things go here.
          Until then, feel free to test the features out!</p>
       <p>Also, if you want to check out some cool HTML, try highlighting
@@ -28,6 +44,7 @@
          <input type="text" placeholder="username" name="username" class="infofield">
          <input type="password" placeholder="password" name="password" class="infofield">
       </form>
+      <p class="noprint">You can use CTRL+P to print this page. This text won't show up. Enjoy!</p>
       <button>Submit</button>
    </body>
 
