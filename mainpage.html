@@ -20,7 +20,7 @@
          }
          @media print {
             .noprint {
-               display:none;
+               display: none;
             }
          }
          @media (max-width: 900px) {
@@ -32,10 +32,18 @@
             .changingheader::after {
                content: " Welcome to my first page!"
             }
+            #mobilewarning {
+               display: none;
+            }
          }
       </style>
    </head>
    <body>
+      <div class="container">
+         <div class="alert alert-danger" role="alert" ID="mobilewarning">
+            Some functionality may be limited on smaller screens.
+         </div>
+      </div>
       <h1 class="changingheader">Hello!</h1>
       <p>This is just my first page. We'll see how things go here.
          Until then, feel free to test the features out!</p>
@@ -47,6 +55,8 @@
       </form>
       <p class="noprint">You can use CTRL+P to print this page. This text won't show up. Enjoy!</p>
       <button>Submit</button>
+      <br>
+      <a href="spadeslist.html">See all the cards!</a>
    </body>
 
 </html>
