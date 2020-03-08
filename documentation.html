@@ -4,12 +4,132 @@
    <head>
       <title>Documentation</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <style>
+         table, th, td, tr {
+            border: 1px solid black;
+            text-align: center;
+         }
+         h1, h2, p, table {
+            margin: 25px;
+         }
+         table .tdjustify {
+            text-align: justify;
+         }
+         #docupclass {
+            margin-left: 25px;
+         }
+      </style>
    </head>
 
    <body>
       <h1>Documentation</h1>
+      <h2>Player Arrays</h2>
+      <p>Each player has an array (one-row list) attributed to them in order to yield and pull information
+         about the players. The array will be modified throughout the game to reflect the player's stats
+         and the deck.</p>
+      <p>Here's a pic of the beginning of the init for the class Player:</p>
+      <img src="C:/Users/chuti/spadesweb/DocuPClass.png" id="docupclass">
+      <p>The following table shows the indices of the value, the standard value, and the meaning of each value.</p>
+      <table>
+         <tr>
+            <th>Array Index</th>
+            <th>Standard Values</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+            <td>0</td>
+            <td>deck(n)</td>
+            <td class="tdjustify">The deck of player n, itself a realtime list.</td>
+         </tr>
+         <tr>
+            <td>1</td>
+            <td>playedcards(n)</td>
+            <td class="tdjustify">Realtime list of played cards for player N.</td>
+         </tr>
+         <tr>
+            <td>2</td>
+            <td>remainingcards(n)</td>
+            <td class="tdjustify">Realtime list of remaining cards. Different for every player due to imperfect information.</td>
+         </tr>
+         <tr>
+            <td>3</td>
+            <td>0, 1, 2</td>
+            <td class="tdjustify">Nil: False, True, blind</td>
+         </tr>
+         <tr>
+            <td>4</td>
+            <td>p: 0, 1, 2</td>
+            <td class="tdjustify">Partner nil: False, True, blind</td>
+         </tr>
+         <tr>
+            <td>5</td>
+            <td>X</td>
+            <td class="tdjustify">Tricks taken</td>
+         </tr>
+         <tr>
+            <td>6</td>
+            <td>X</td>
+            <td class="tdjustify">Bid</td>
+         </tr>
+         <tr>
+            <td>7</td>
+            <td>p: X</td>
+            <td class="tdjustify">Partner tricks taken</td>
+         </tr>
+         <tr>
+            <td>8</td>
+            <td>p: x</td>
+            <td class="tdjustify">Partner bid</td>
+         </tr>
+         <tr>
+            <td>9</td>
+            <td>XX</td>
+            <td class="tdjustify">Team tricks taken</td>
+         </tr>
+         <tr>
+            <td>10</td>
+            <td>XX</td>
+            <td class="tdjustify">Team bid</td>
+         </tr>
+         <tr>
+            <td>11</td>
+            <td>XX</td>
+            <td class="tdjustify">Enemy team tricks</td>
+         </tr>
+         <tr>
+            <td>12</td>
+            <td>XX</td>
+            <td class="tdjustify">Enemy team bid</td>
+         </tr>
+         <tr>
+            <td>13</td>
+            <td>XXX</td>
+            <td class="tdjustify">Total team bags</td>
+         </tr>
+         <tr>
+            <td>14</td>
+            <td>XXX</td>
+            <td class="tdjustify">Total enemy bags</td>
+         </tr>
+         <tr>
+            <td>15</td>
+            <td>XXX</td>
+            <td class="tdjustify">Team score</td>
+         </tr>
+         <tr>
+            <td>16</td>
+            <td>XXX</td>
+            <td class="tdjustify">Enemey team score</td>
+         </tr>
+         <tr>
+            <td>17</td>
+            <td>XNX</td>
+            <td class="tdjustify">AI=0, PLAYER=1</td>
+         </tr>
+      </table>
+      <br>
       <h2>Functions</h2>
-
+      <p>8=========D</p>
       <br>
       <a href="mainpage.html">Back to home</a>
    </body>
